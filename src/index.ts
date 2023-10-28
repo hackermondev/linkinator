@@ -320,12 +320,12 @@ export class LinkChecker extends EventEmitter {
 		}
 
 		// Assume any 2xx status is 👌
-		if (status >= 200 && status < 300) {
-			state = LinkState.OK;
-		} else {
-			failures.push(response!);
-		}
-
+		// if (status >= 200 && status < 300) {
+		// 	state = LinkState.OK;
+		// } else {
+		// 	failures.push(response!);
+		// }
+		failures.push(response!);
 		const result: LinkResult = {
 			url: mapUrl(options.url.href, options.checkOptions),
 			status,
